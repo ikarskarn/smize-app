@@ -1,24 +1,18 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
-import "./App.css";
+import { Link } from "react-router-dom";
+import NavBar from "./Components/NavBar/NavBar";
+import Instructions from "./Components/Instructions/Instructions";
+import BackgroundVideo from "./Videos/backgroundVideo.mp4";
 
 class App extends React.Component {
     render() {
         return (
             <main className="App">
-                <div className="content" aria-live="polite">
-                    <nav role="navigation" className="nav-bar black">
-                        <Link to="/" className="nav nav-home">
-                            Instructions
-                        </Link>
-                        <Link to="/smize" className="nav nav-smize">
-                            Smize
-                        </Link>
-                        <Link to="/share" className="nav nav-share">
-                            Share Your Own
-                        </Link>
-                    </nav>
-                </div>
+                <NavBar />
+                <video className="background-video" autoPlay loop muted>
+                    <source src={BackgroundVideo} type="video/mp4" />
+                </video>
+                <div className="cover" />
                 <header className="introduction">
                     <h1>Smize</h1>
                     <p>

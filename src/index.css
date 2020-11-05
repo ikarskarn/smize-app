@@ -10,3 +10,38 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+p {
+    font-family: "Anton", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Neucha", cursive;
+}
+
+.background-video {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    transform: "translate(-50%, -50%)";
+    z-index: -2;
+}
+
+.cover {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Black background with opacity */
+    z-index: -1; /* Specify a stack order */
+}
