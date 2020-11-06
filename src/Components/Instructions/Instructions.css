@@ -1,0 +1,38 @@
+h1 {
+    font-size: 78px;
+    font-family: "Rock Salt", cursive;
+    text-align: center;
+}
+
+.instructions-section {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+p {
+    line-height: 24px;
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 28px;
+    border-bottom: 2px solid #ff5851;
+}
+
+.smize-button {
+    margin-top: 30px;
+    padding: 30px;
+    width: 200px;
+    background-color: #ff5851;
+    box-shadow: 3px 3px darkgrey;
+    align-self: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+
+    border-radius: 16px;
+}

@@ -1,0 +1,51 @@
+.contact-item {
+    border-left: 1px solid white;
+    padding: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.alt {
+    border-left: none;
+}
+
+footer {
+    background-color: #ff5851;
+    color: white;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+footer > a,
+footer > p {
+    color: white;
+    font-size: 16px;
+}
+
+footer > a:hover {
+    color: black;
+}
+
+@media only screen and (min-width: 600px) {
+    footer > a,
+    footer > p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    footer > a,
+    footer > p {
+        font-family: Roboto;
+        line-height: 24px;
+    }
+
+    footer {
+        font-size: 22px;
+    }
+}
