@@ -13,43 +13,41 @@ export default class NavBar extends React.Component {
 
     render() {
         return (
-            <div className="content" aria-live="polite">
-                <nav role="navigation" className="nav-bar black">
-                    <Link
-                        onClick={() => this.context.setCurrentPage("home", false)}
-                        to="/"
-                        className={
-                            this.context.currentPage === "home"
-                                ? "nav nav-home selected"
-                                : "nav nav-home"
-                        }
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        onClick={() => this.context.setCurrentPage("smize", true)}
-                        to="/smize"
-                        className={
-                            this.context.currentPage === "smize"
-                                ? "nav nav-smize selected"
-                                : "nav nav-smize"
-                        }
-                    >
-                        Smize
-                    </Link>
-                    <Link
-                        onClick={() => this.context.setCurrentPage("share", false)}
-                        to="/share"
-                        className={
-                            this.context.currentPage === "share"
-                                ? "nav nav-share selected"
-                                : "nav nav-share"
-                        }
-                    >
-                        Smize Share
-                    </Link>
-                </nav>
-            </div>
+            <nav role="navigation" className="nav-bar black">
+                <Link
+                    onClick={() => this.context.setCurrentPage("home", false)}
+                    to="/"
+                    className={
+                        this.context.currentPage === "home"
+                            ? "nav nav-home selected"
+                            : "nav nav-home"
+                    }
+                >
+                    Home
+                </Link>
+                <Link
+                    onClick={() => this.context.setCurrentPage("smize", true)}
+                    to="/smize"
+                    className={
+                        this.context.currentPage === "smize"
+                            ? "nav nav-smize selected"
+                            : "nav nav-smize"
+                    }
+                >
+                    Smize
+                </Link>
+                <Link
+                    onClick={() => this.context.setCurrentPage("share", false)}
+                    to="/share"
+                    className={
+                        this.context.currentPage === "share"
+                            ? "nav nav-share selected"
+                            : "nav nav-share"
+                    }
+                >
+                    Smize Share
+                </Link>
+            </nav>
         );
     }
 }

@@ -1,0 +1,64 @@
+.share-title {
+    font-size: 48px;
+    font-family: "Rock Salt", cursive;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 30px;
+}
+
+.all-sayings-section {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+p {
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.add-to-section > h2 {
+    all: none;
+    font-size: 28px;
+    border-bottom: none;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+.add-to-section {
+    border-bottom: 2px solid #ff5851;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.delete-from-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.add-button {
+    border: none;
+    font-size: 18px;
+    color: #19a101;
+}
+
+.delete-button {
+    border: none;
+    font-size: 14px;
+    color: #ff5851;
+}
+
+.button-text {
+    padding: 0px 10px;
+}
+
+.saying-text {
+    padding: 0px 20px;
+    width: 100%;
+}

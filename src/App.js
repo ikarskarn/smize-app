@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Instructions from "./Components/Instructions/Instructions";
 import Smize from "./Components/Smize/Smize";
+import Share from "./Components/Share/Share";
 import BackgroundVideo from "./Videos/backgroundVideo.mp4";
 import Footer from "./Components/Footer/Footer";
 import Context from "./Context";
@@ -131,6 +132,7 @@ class App extends React.Component {
                     <div className="content" aria-live="polite">
                         <Route exact path="/" component={Instructions} />
                         <Route path="/smize" component={Smize} />
+                        <Route path="/share" component={Share} />
                     </div>
                     <Footer />
                 </Context.Provider>
