@@ -6,10 +6,12 @@ export default class Slideshow extends React.Component {
     static contextType = Context;
 
     componentDidMount() {
-        let rnd = Math.floor(Math.random() * Math.floor(this.context.sayings.length));
+        const store = [] || this.context;
+        const sayings = [] || store.sayings;
+        let rnd = Math.floor(Math.random() * Math.floor(sayings.length));
         //get random saying
-        const str = this.context.sayings[rnd].content;
-        this.context.setCurrentSaying(str);
+        const str = [] || sayings[rnd].content;
+        [] || store.setCurrentSaying(str);
     }
 
     render() {
