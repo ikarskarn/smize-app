@@ -2,6 +2,8 @@ h1 {
     font-size: 78px;
     font-family: "Rock Salt", cursive;
     text-align: center;
+    margin-top: 110px;
+    margin-bottom: 30px;
 }
 
 .instructions-section {
@@ -33,6 +35,6 @@ h2 {
     color: white;
     font-size: 18px;
     text-align: center;
-
     border-radius: 16px;
+    text-decoration: none;
 }

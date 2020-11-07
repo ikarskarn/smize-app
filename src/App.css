@@ -2,57 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-size: 1em;
-}
-
 button:hover {
     cursor: pointer;
-}
-
-.black {
-    background-color: black;
-    color: white;
-}
-
-.grey {
-    background-color: grey;
-    color: white;
-}
-
-.lgrey {
-    background-color: lightgrey;
-    color: black;
-}
-
-.dgrey {
-    background-color: darkgrey;
-    color: white;
-}
-
-.nav-bar {
-    padding: 20px;
-    display: flex;
-    justify-content: left;
-}
-
-.nav {
-    padding: 10px;
-    color: white;
-}
-
-.smize-button {
-    padding: 30px;
-    text-align: center;
-    border: 1px solid black;
-    margin: 10px;
-    width: 200px;
-    align-self: center;
-}
-
-.introduction,
-.instructions-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }

@@ -1,15 +1,13 @@
 import React from "react";
+import Context from "../../Context";
 import "./Instructions.css";
-import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
 
 class Instructions extends React.Component {
+    static contextType = Context;
     render() {
         return (
             <div>
-                <header className="introduction">
-                    <h1>Smize</h1>
-                </header>
+                <h1>Smize</h1>
                 <section className="instructions-section">
                     <h2>Smile With Your Eyes</h2>
                     <p>
@@ -22,7 +20,11 @@ class Instructions extends React.Component {
                         read what you see. A collection of sayings, jokes, and light encouragement
                         will help you convince your subjects to smile naturally for the best photos.
                     </p>
-                    <a href="/smize" className="smize-button">
+                    <a
+                        onClick={() => this.context.setCurrentPage("smize", true)}
+                        href="/smize"
+                        className="smize-button"
+                    >
                         Smize for the Camera
                     </a>
                 </section>
