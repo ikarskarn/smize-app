@@ -24,6 +24,18 @@ class App extends React.Component {
         currentSaying: "",
         counting: false,
         //publicly accessible functions
+        addSaying: (sayings) => {
+            this.setState({
+                sayings: [...this.state.sayings, sayings],
+            });
+        },
+        deleteSaying: (id) => {
+            console.log(id);
+            const newSayings = this.state.sayings.filter((ns) => parseInt(ns.id) !== parseInt(id));
+            this.setState({
+                sayings: newSayings,
+            });
+        },
         setCurrentSaying: (str) => {
             this.setState({
                 currentSaying: str,

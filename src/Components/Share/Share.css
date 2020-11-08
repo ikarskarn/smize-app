@@ -17,7 +17,8 @@
 
 p {
     line-height: 24px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: "Neucha";
 }
 
 .add-to-section > h2 {
@@ -61,4 +62,32 @@ p {
 .saying-text {
     padding: 0px 20px;
     width: 100%;
+}
+
+.form-container {
+    background-color: green;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn {
+    height: 50%;
+    border-radius: 10px;
+}
+
+.form-container > textarea {
+    height: 75%;
+    width: 70%;
+    border-radius: 16px;
+    padding: 10px;
+    font-family: "Neucha";
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
 }
