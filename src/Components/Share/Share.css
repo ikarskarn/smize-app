@@ -47,12 +47,14 @@ p {
     border: none;
     font-size: 18px;
     color: #19a101;
+    background-color: rgba(1, 1, 1, 0);
 }
 
 .delete-button {
     border: none;
     font-size: 14px;
     color: #ff5851;
+    background-color: rgba(1, 1, 1, 0);
 }
 
 .button-text {
@@ -65,7 +67,6 @@ p {
 }
 
 .form-container {
-    background-color: green;
     height: 100px;
     width: 100%;
     display: flex;
@@ -77,6 +78,7 @@ p {
 .btn {
     height: 50%;
     border-radius: 10px;
+    width: 12%;
 }
 
 .form-container > textarea {
@@ -90,4 +92,12 @@ p {
 
 .hidden {
     display: none;
+}
+
+.add {
+    background-color: #19a101;
+}
+
+.cancel {
+    background-color: #ff5851;
 }

@@ -8,7 +8,7 @@ import Context from "../../Context";
 export default class Introduction extends React.Component {
     static contextType = Context;
     state = {
-        choose: "",
+        choose: "Collecting the next Smize",
         slideshow: "hidden",
     };
     handleButtonClick = (id) => {
@@ -19,6 +19,13 @@ export default class Introduction extends React.Component {
         });
         this.context.setCurrentCategory(id);
         this.context.setCount();
+    };
+    handleBackButton = () => {
+        this.context.stopCounting();
+        this.setState({
+            choose: "",
+            slideshow: "hidden",
+        });
     };
     render() {
         const categoryOptions = STORE.categories.map((category) => {
@@ -42,7 +49,7 @@ export default class Introduction extends React.Component {
                     <section className="pick-a-category">{categoryOptions}</section>
                 </div>
                 <div className={`slideshow ${this.state.slideshow}`}>
-                    <Slideshow />
+                    <Slideshow handleBackButton={this.handleBackButton} />
                 </div>
             </div>
         );

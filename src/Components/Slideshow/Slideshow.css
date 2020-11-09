@@ -35,3 +35,44 @@
     font-size: 32px;
     font-family: "Neucha";
 }
+
+.btn-timer {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+.click-increase {
+    text-align: center;
+    margin: 0px;
+}
+
+.back-button {
+    width: 200px;
+    height: 60px;
+    align-self: center;
+    border-radius: 16px;
+    background-color: #ff5851;
+    color: white;
+    font-size: 20px;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background-color: #ff5851;
+    color: white;
+    background-image: none;
+    transition-duration: 0.3s;
+}
+
+@media only screen and (min-width: 800px) {
+    .slideshow-text {
+        font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .slideshow-text {
+        font-size: 72px;
+    }
+}

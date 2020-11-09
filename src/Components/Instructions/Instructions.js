@@ -1,6 +1,7 @@
 import React from "react";
 import Context from "../../Context";
 import "./Instructions.css";
+import { Link } from "react-router-dom";
 
 class Instructions extends React.Component {
     static contextType = Context;
@@ -20,13 +21,13 @@ class Instructions extends React.Component {
                         read what you see. A collection of sayings, jokes, and light encouragement
                         will help you convince your subjects to smile naturally for the best photos.
                     </p>
-                    <a
+                    <Link
+                        to="/smize"
                         onClick={() => this.context.setCurrentPage("smize", true)}
-                        href="/smize"
                         className="smize-button"
                     >
                         Smize for the Camera
-                    </a>
+                    </Link>
                 </section>
             </div>
         );

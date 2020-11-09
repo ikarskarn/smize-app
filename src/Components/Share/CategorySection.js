@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategorySection.css";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Context from "../../Context";
 
@@ -77,15 +77,15 @@ class CategorySection extends React.Component {
                             onChange={(e) => this.updateContent(e)}
                             required
                         />
-                        <button type="submit" className="btn">
-                            Add
+                        <button type="submit" className="btn add">
+                            <FontAwesomeIcon icon={faCheck} />
                         </button>
                         <button
                             type="button"
                             className="btn cancel"
                             onClick={() => this.handleCancel()}
                         >
-                            Cancel
+                            <FontAwesomeIcon icon={faTimes} />
                         </button>
                     </form>
                 </div>

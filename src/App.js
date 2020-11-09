@@ -21,9 +21,15 @@ class App extends React.Component {
         currentCategory: 1,
         timer: 3,
         seconds: 3,
-        currentSaying: "",
+        animSpeed: "three",
+        currentSaying: "Collecting your first smize.",
         counting: false,
         //publicly accessible functions
+        stopCounting: () => {
+            this.setState({
+                counting: false,
+            });
+        },
         addSaying: (sayings) => {
             this.setState({
                 sayings: [...this.state.sayings, sayings],
@@ -108,25 +114,25 @@ class App extends React.Component {
         handleTimer: (num) => {
             switch (num) {
                 case 0:
-                    this.setState({ timer: 3, seconds: 3 });
+                    this.setState({ timer: 3, seconds: 3, animSpeed: "three" });
                     break;
                 case 3:
-                    this.setState({ timer: 5, seconds: 5 });
+                    this.setState({ timer: 5, seconds: 5, animSpeed: "five" });
                     break;
                 case 5:
-                    this.setState({ timer: 7, seconds: 7 });
+                    this.setState({ timer: 7, seconds: 7, animSpeed: "seven" });
                     break;
                 case 7:
-                    this.setState({ timer: 10, seconds: 10 });
+                    this.setState({ timer: 10, seconds: 10, animSpeed: "ten" });
                     break;
                 case 10:
-                    this.setState({ timer: 15, seconds: 15 });
+                    this.setState({ timer: 15, seconds: 15, animSpeed: "fifteen" });
                     break;
                 case 15:
-                    this.setState({ timer: 20, seconds: 20 });
+                    this.setState({ timer: 20, seconds: 20, animSpeed: "twenty" });
                     break;
                 default:
-                    this.setState({ timer: 3, seconds: 3 });
+                    this.setState({ timer: 3, seconds: 3, animSpeed: "three" });
                     break;
             }
         },

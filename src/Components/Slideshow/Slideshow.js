@@ -17,15 +17,24 @@ export default class Slideshow extends React.Component {
     render() {
         return (
             <div className="slideshow-page">
-                <button
-                    onClick={() => this.context.handleTimer(this.context.timer)}
-                    className="timer"
-                    type="button"
-                >
-                    {`${this.context.timer} SEC`}
-                </button>
+                <div className="btn-timer">
+                    <button
+                        onClick={() => this.context.handleTimer(this.context.timer)}
+                        className="timer"
+                        type="button"
+                    >
+                        {`${this.context.seconds} SEC`}
+                    </button>
+                </div>
+                <p className="click-increase">Click to Increase</p>
                 <h1 className="slideshow-text">{this.context.currentSaying}</h1>
-                <button type="button">Go Back</button>
+                <button
+                    className="back-button"
+                    type="button"
+                    onClick={() => this.props.handleBackButton()}
+                >
+                    Go Back
+                </button>
             </div>
         );
     }
