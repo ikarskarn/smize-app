@@ -15,7 +15,7 @@ class Share extends React.Component {
     render() {
         const categories = this.context.categories || [];
         const sayings = this.context.sayings || [];
-        console.log("Sayings: ", sayings);
+
         return (
             <div className="share-page">
                 <h1 className="share-title">Share Your Own</h1>

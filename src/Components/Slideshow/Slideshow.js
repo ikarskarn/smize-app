@@ -10,7 +10,7 @@ export default class Slideshow extends React.Component {
         const sayings = [] || store.sayings;
         let rnd = Math.floor(Math.random() * Math.floor(sayings.length));
         //get random saying
-        const str = [] || sayings[rnd].content;
+        const str = [] || sayings[rnd].saying_content;
         [] || store.setCurrentSaying(str);
     }
 

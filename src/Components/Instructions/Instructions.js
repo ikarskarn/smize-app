@@ -18,8 +18,9 @@ class Instructions extends React.Component {
                     <h2>Instructions</h2>
                     <p>
                         Simply click the "Smize for the Camera" button, pick a category, and just
-                        read what you see. A collection of sayings, jokes, and light encouragement
-                        will help you convince your subjects to smile naturally for the best photos.
+                        read what you see. Smize is A collection of sayings, jokes, and light
+                        encouragement that will help you convince your subjects to smile naturally
+                        for the best photos.
                     </p>
                     <Link
                         to="/smize"

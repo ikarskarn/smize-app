@@ -8,6 +8,7 @@ import BackgroundVideo from "./Videos/backgroundVideo.mp4";
 import Footer from "./Components/Footer/Footer";
 import Context from "./Context";
 import STORE from "./STORE";
+import config from "./config";
 
 class App extends React.Component {
     //primary state used with context
@@ -101,7 +102,7 @@ class App extends React.Component {
             });
 
             //get random saying
-            const str = currentSayings[rnd].content;
+            const str = currentSayings[rnd].saying_content;
             this.setState({
                 currentSaying: str,
                 seconds: this.state.timer,
@@ -137,6 +138,48 @@ class App extends React.Component {
             }
         },
     };
+
+    componentDidMount() {
+        //get all categories from api and pass into state
+        fetch(`${config.API_ENDPOINT}/api/categories`, {
+            method: "GET",
+            headers: {
+                "content-type": "application/json",
+            },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    return response.json().then((error) => Promise.reject(error));
+                }
+                return response.json();
+            })
+            .then((categories) => {
+                this.setState({ categories });
+            })
+            .catch((error) => {
+                console.error("Category error: ", error);
+            });
+
+        //get all sayings from api and pass into state
+        fetch(`${config.API_ENDPOINT}/api/sayings`, {
+            method: "GET",
+            headers: {
+                "content-type": "application/json",
+            },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    return response.json().then((error) => Promise.reject(error));
+                }
+                return response.json();
+            })
+            .then((sayings) => {
+                this.setState({ sayings });
+            })
+            .catch((error) => {
+                console.error("Course error: ", error);
+            });
+    }
 
     render() {
         return (
