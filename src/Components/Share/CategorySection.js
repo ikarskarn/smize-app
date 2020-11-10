@@ -3,6 +3,7 @@ import "./CategorySection.css";
 import { faCheck, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Context from "../../Context";
+import config from "../../config";
 
 class CategorySection extends React.Component {
     static contextType = Context;
