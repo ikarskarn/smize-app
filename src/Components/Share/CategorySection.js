@@ -20,7 +20,7 @@ class CategorySection extends React.Component {
     };
 
     handleDeleteSayingRequest = (id) => {
-        const url = `${config.API_ENDPOINT}/api/sayings/${parseInt(id)}`;
+        const url = `${config.API_ENDPOINT}/api/sayings/${id}`;
         const options = {
             method: "DELETE",
             headers: {
@@ -34,7 +34,7 @@ class CategorySection extends React.Component {
                         throw error;
                     });
                 }
-                return res;
+                return res.status(204).end();
             })
             .then(this.context.deleteSaying(id))
             .catch((error) => {
@@ -146,7 +146,7 @@ class CategorySection extends React.Component {
                             <button
                                 className="delete-button"
                                 type="button"
-                                onClick={() => this.handleDeleteSayingRequest(saying.id)}
+                                onClick={() => this.handleDeleteSayingRequest(parseInt(saying.id))}
                             >
                                 <span className="button-text">Delete</span>
                             </button>

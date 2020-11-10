@@ -7,7 +7,6 @@ import Share from "./Components/Share/Share";
 import BackgroundVideo from "./Videos/backgroundVideo.mp4";
 import Footer from "./Components/Footer/Footer";
 import Context from "./Context";
-import STORE from "./STORE";
 import config from "./config";
 
 class App extends React.Component {
@@ -16,8 +15,8 @@ class App extends React.Component {
         error: null,
         //publicly accessible variables
         currentPage: "home",
-        categories: STORE.categories,
-        sayings: STORE.sayings,
+        categories: [],
+        sayings: [],
         previousRnd: 0,
         currentCategory: 1,
         timer: 3,
