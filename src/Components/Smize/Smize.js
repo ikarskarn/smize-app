@@ -1,7 +1,6 @@
 import React from "react";
 import "./Smize.css";
 import "../../App.css";
-import STORE from "../../STORE";
 import Slideshow from "../Slideshow/Slideshow";
 import Context from "../../Context";
 
@@ -28,7 +27,7 @@ export default class Introduction extends React.Component {
         });
     };
     render() {
-        const categoryOptions = STORE.categories.map((category) => {
+        const categoryOptions = this.context.categories.map((category) => {
             return (
                 <button
                     className={`category-button cat-${category.title}`}

@@ -29,17 +29,13 @@ class CategorySection extends React.Component {
         };
         fetch(url, options)
             .then((res) => {
-                if (!res.ok) {
-                    return res.json().then((error) => {
-                        throw error;
-                    });
+                if (res.ok) {
+                    return Promise.resolve("User deleted saying.");
+                } else {
+                    return Promise.reject("Something went wrong!");
                 }
-                return res.status(204).end();
             })
-            .then(this.context.deleteSaying(id))
-            .catch((error) => {
-                console.error(error);
-            });
+            .then(this.context.deleteSaying(id));
     };
 
     handleAddSayingRequest = (e) => {

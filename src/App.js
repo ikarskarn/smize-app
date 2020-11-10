@@ -36,7 +36,6 @@ class App extends React.Component {
             });
         },
         deleteSaying: (id) => {
-            console.log(id);
             const newSayings = this.state.sayings.filter((ns) => parseInt(ns.id) !== parseInt(id));
             this.setState({
                 sayings: newSayings,
