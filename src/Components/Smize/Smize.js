@@ -27,20 +27,22 @@ export default class Introduction extends React.Component {
         });
     };
     render() {
-        const categoryOptions = this.context.categories.map((category) => {
-            return (
-                <button
-                    className={`category-button cat-${category.title}`}
-                    key={`category-${category.id}`}
-                    id={category.id}
-                    value={category.id}
-                    type="button"
-                    onClick={() => this.handleButtonClick(category.id)}
-                >
-                    {category.title}
-                </button>
-            );
-        });
+        const categoryOptions =
+            [] ||
+            this.context.categories.map((category) => {
+                return (
+                    <button
+                        className={`category-button cat-${category.title}`}
+                        key={`category-${category.id}`}
+                        id={category.id}
+                        value={category.id}
+                        type="button"
+                        onClick={() => this.handleButtonClick(category.id)}
+                    >
+                        {category.title}
+                    </button>
+                );
+            });
         return (
             <div className="smize-page">
                 <div className={`choose ${this.state.choose}`}>
