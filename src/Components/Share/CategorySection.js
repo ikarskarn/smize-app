@@ -11,14 +11,18 @@ class CategorySection extends React.Component {
         currentCategoryId: 1,
         saying_content: "",
     };
+    //handles the update state for category
+    //sets the add form to visible
     updateCategory = (id) => {
         this.setState({ currentCategoryId: id });
         this.props.handleShowForm(true, id);
     };
+    //updates content state based on value of textarea
     updateContent = (e) => {
         this.setState({ saying_content: e.target.value });
     };
 
+    //delete request from API
     handleDeleteSayingRequest = (id) => {
         const url = `${config.API_ENDPOINT}/api/sayings/${id}`;
         const options = {
@@ -35,13 +39,13 @@ class CategorySection extends React.Component {
                     return Promise.reject("Something went wrong!");
                 }
             })
+            //handle delete form context state
             .then(this.context.deleteSaying(id));
     };
 
     handleAddSayingRequest = (e) => {
         e.preventDefault();
-        //const allSayings = this.context.sayings;
-        //const id = allSayings.length + 1;
+        //build new saying before adding to database
         const category_id = this.state.currentCategoryId;
         const saying_content = this.state.saying_content;
         const newSaying = { category_id, saying_content };
@@ -64,21 +68,24 @@ class CategorySection extends React.Component {
                 }
                 return res.json();
             })
+            //add to context state
             .then(this.context.addSaying(newSaying))
             .catch((error) => {
                 console.error(error);
             });
 
-        //this.context.addSaying(newSaying);
+        //clear add form and hide it
         this.clearForm();
         this.props.handleShowForm(false, category_id);
     };
 
+    //clear add form and hide it
     handleCancel = () => {
         this.clearForm();
         this.props.handleShowForm(false, 1);
     };
 
+    //clear form data
     clearForm = () => {
         const frm = document.getElementById("add-form");
         frm.reset();

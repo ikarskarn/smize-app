@@ -5,13 +5,14 @@ import "./Slideshow.css";
 export default class Slideshow extends React.Component {
     static contextType = Context;
 
-    componentDidMount() {
-        const sayings = [] || this.context.sayings;
-        let rnd = Math.floor(Math.random() * Math.floor(sayings.length));
-        //get random saying
-        const str = [] || sayings[rnd].saying_content;
-        [] || this.context.setCurrentSaying(str);
-    }
+    //componentDidMount() {
+    //
+    //  const sayings = [] || this.context.sayings;
+    //let rnd = Math.floor(Math.random() * Math.floor(sayings.length));
+    //get random saying
+    //const str = [] || sayings[rnd].saying_content;
+    //[] || this.context.setCurrentSaying(str);
+    //}
 
     render() {
         return (
