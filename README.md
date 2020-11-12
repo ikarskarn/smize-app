@@ -50,7 +50,7 @@ The Smize Share page provides a list of all sayings divided into categories. A u
 
 <img src="src/images/smizeSharePage_mobile_01.jpg" alt="Mobile Smize Share Page" width="250"/> &nbsp; &nbsp; &nbsp; <img src="src/images/smizeSharePage_mobile_02.jpg" alt="Mobile Smize Share Add Example" width="250"/>
 
-<img src="src/images/smizeShare_desktop.jpg" alt="Desktop Smize Share Page" width="525"/>
+<img src="src/images/smizeSharePage_desktop.jpg" alt="Desktop Smize Share Page" width="525"/>
 
 ## API ENDPOINTS
 
