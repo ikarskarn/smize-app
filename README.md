@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Smize
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> [Smize App](https://smize-app.vercel.app/) \| [App GitHub Repo](https://github.com/ikarskarn/smize-app.git) \| [Api GitHub Repo](https://github.com/ikarskarn/smize-api.git)
 
-## Available Scripts
+Smize utilizes the custom API created by Marc Tucker. [API DOCUMENTATION HERE](https://github.com/ikarskarn/smize-api/blob/master/README.md)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Smize; Smile with your eyes!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The phrase was coined by Tara Banks. Smiling with your eyes is the best way to get a natural smile for the camera. The Smize App is designed for photographers to encourage their clients to do just that. One of the most challenging aspects of being a photographer, is getting a natural smile out of the client. Smize displays humorous (sometimes) sayings, jokes, and statements for the photographer to read while taking photos of clients.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> This version of the app is intended to demo the app's functionality and provides observers with the opportunity to create a delete their own to experience the app without credentials.
 
-### `npm test`
+## Tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The tools used in the creation of this app include:
 
-### `npm run build`
+Front end: **React** \| **CSS** \| **HTML** \| **JQuery**
+Back end: **Express** \| **Node.js** \| **PostgreSQL**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Purpose
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Photographers from all over can add their own sayings with the Share Your Smize feature to expand the app even further. They can share their own or just use the app to get a laugh or a chuckle out of their clients. They just have to choose a category and watch the Smize roll. They can even pick a preferred speed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Style
 
-### `npm run eject`
+Below is a list of the current pages and a brief description of their purpose and intentional design.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Landing Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The landing page is to simply provide users with a brief description about the app and what steps can be taken next.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src="src/images/landingPage_mobile_01.jpg" alt="Mobile Home Page" width="250"/> &nbsp; &nbsp; &nbsp; <img src="src/images/landingPage_mobile_02.jpg" alt="Mobile Home Page" width="250"/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src="src/images/landingPage_tablet.jpg" alt="Tablet Home Page" width="525"/>
 
-## Learn More
+## Smize Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Smize page is in two parts. Part 1 is a category selection. Part 2 displays sayings from the chosen category.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="src/images/smizePage_mobile_01.jpg" alt="Mobile Smize Category Selection" width="250"/> &nbsp; &nbsp; &nbsp; <img src="src/images/smizePage_mobile_02.jpg" alt="Mobile Smize Slideshow Example" width="250"/>
 
-### Code Splitting
+<img src="src/images/smizePage_tablet.jpg" alt="Tablet Smize Catalog Choice" width="525"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Smize Share Page
 
-### Analyzing the Bundle Size
+The Smize Share page provides a list of all sayings divided into categories. A user can simply add a new saying by click **Add +** next to the category they wish to create a new saying for. They can also delete a Smize by simply clicking the delete button next to the saying.
+\*This would normally be filtered by user as well but for demonstration purposes, it has not.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="src/images/smizeSharePage_mobile_01.jpg" alt="Mobile Smize Share Page" width="250"/> &nbsp; &nbsp; &nbsp; <img src="src/images/smizeSharePage_mobile_02.jpg" alt="Mobile Smize Share Add Example" width="250"/>
 
-### Making a Progressive Web App
+<img src="src/images/smizeShare_desktop.jpg" alt="Desktop Smize Share Page" width="525"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## API ENDPOINTS
 
-### Advanced Configuration
+Below are the list of endpoints available for the API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### CATEGORIES
 
-### Deployment
+/api/categories
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-   **GET**: get all categories
 
-### `npm run build` fails to minify
+### SAYINGS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+/api/sayings
+
+-   **GET**: get all saying
+-   **POST**: post new saying
+
+/api/sayings/:saying_id
+
+-   **DELETE**: delete saying by id

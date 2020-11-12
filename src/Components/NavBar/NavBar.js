@@ -5,12 +5,14 @@ import Context from "../../Context";
 
 export default class NavBar extends React.Component {
     static contextType = Context;
+    //used to determine which nav menu item is selected
     state = {
         home: this.context.currentPage === "home" ? "nav nav-home selected" : "nav nav-home",
         smize: "nav nav-smize",
         share: "nav nav-share",
     };
 
+    //classname uses state to determine styling for selection purposes
     render() {
         return (
             <nav role="navigation" className="nav-bar black">

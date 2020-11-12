@@ -25,44 +25,52 @@ class App extends React.Component {
         currentSaying: "Collecting your first smize.",
         counting: false,
         //publicly accessible functions
+        //stop timer
         stopCounting: () => {
             this.setState({
                 counting: false,
             });
         },
+        //add saying to context
         addSaying: (sayings) => {
             this.setState({
                 sayings: [...this.state.sayings, sayings],
             });
         },
+        //deletes saying from context
         deleteSaying: (id) => {
             const newSayings = this.state.sayings.filter((ns) => parseInt(ns.id) !== parseInt(id));
             this.setState({
                 sayings: newSayings,
             });
         },
+        //sets current setting to be displayed
         setCurrentSaying: (str) => {
             this.setState({
                 currentSaying: str,
             });
         },
+        //sets page currently selected and ensures that timer has stopped
         setCurrentPage: (selection, count) => {
             this.setState({
                 currentPage: selection,
                 counting: count,
             });
         },
+        //sets currently selected category
         setCurrentCategory: (id) => {
             this.setState({
                 currentCategory: id,
             });
         },
+        //set timer length and start timer
         setCount: () => {
             this.setState({
                 counting: true,
             });
             this.state.startTimer();
         },
+        //begin timer
         startTimer: () => {
             this.myInterval = setInterval(() => {
                 if (!this.state.counting) {
@@ -83,6 +91,7 @@ class App extends React.Component {
                 }
             }, 1000);
         },
+        //choose a random saying to display
         chooseRandom: () => {
             //filter sayings based on chosen category
             const currentSayings = this.state.sayings.filter(

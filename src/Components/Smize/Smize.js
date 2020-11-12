@@ -6,19 +6,27 @@ import Context from "../../Context";
 
 export default class Introduction extends React.Component {
     static contextType = Context;
+    //determines what saying to show and which component is shown
     state = {
         choose: "Collecting the next Smize",
         slideshow: "hidden",
     };
+
     handleButtonClick = (id) => {
-        console.log("ID: ", id);
+        //hides category selection
+        //unhides sideshow
         this.setState({
             choose: "hidden",
             slideshow: "",
         });
+        //sets current category id
+        //begins countdown
         this.context.setCurrentCategory(id);
         this.context.setCount();
     };
+    //hides slideshow
+    //stops timer
+    //unhides category selection
     handleBackButton = () => {
         this.context.stopCounting();
         this.setState({
