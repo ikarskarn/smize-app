@@ -82,7 +82,7 @@ class CategorySection extends React.Component {
     //clear add form and hide it
     handleCancel = () => {
         this.clearForm();
-        this.props.handleShowForm(false, 1);
+        this.props.handleShowForm(false, this.state.currentCategoryId);
     };
 
     //clear form data
