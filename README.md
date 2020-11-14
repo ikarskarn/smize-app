@@ -31,7 +31,7 @@ Below is a list of the current pages and a brief description of their purpose an
 
 The landing page is to simply provide users with a brief description about the app and what steps can be taken next.
 
-<img src="./src/Images/landingPage_mobile_01.jpg" alt="Mobile Home Page" width="250"/> &nbsp; &nbsp; &nbsp; <img src="./src/Images/landingPage_mobile_02.jpg" alt="Mobile Home Page" width="250"/>
+<img src="./src/Images/landingPage_mobile_01.JPG" alt="Mobile Home Page" width="250"/> &nbsp; &nbsp; &nbsp; <img src="./src/Images/landingPage_mobile_02.jpg" alt="Mobile Home Page" width="250"/>
 
 <img src="./src/Images/landingPage_tablet.jpg" alt="Tablet Home Page" width="525"/>
 
