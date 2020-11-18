@@ -10,6 +10,7 @@ class CategorySection extends React.Component {
     state = {
         currentCategoryId: 1,
         saying_content: "",
+        newSaying: {},
     };
     //handles the update state for category
     //sets the add form to visible
@@ -69,7 +70,9 @@ class CategorySection extends React.Component {
                 return res.json();
             })
             //add to context state
-            .then(this.context.addSaying(newSaying))
+            .then((newSaying) => {
+                this.context.addSaying(newSaying);
+            })
             .catch((error) => {
                 console.error(error);
             });
